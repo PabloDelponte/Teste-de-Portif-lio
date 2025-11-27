@@ -1,0 +1,37 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glow vermelho -->
+    <filter id="redGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Gradiente vermelho -->
+    <linearGradient id="redGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ff1a1a"/>
+      <stop offset="50%" stop-color="#ff3333"/>
+      <stop offset="100%" stop-color="#ff1a1a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Círculo -->
+  <circle cx="100" cy="100" r="90"
+          fill="#0d0d0d"
+          stroke="url(#redGrad)"
+          stroke-width="6" />
+
+  <!-- Texto BANKAI -->
+  <text x="50%" y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="38"
+        fill="url(#redGrad)"
+        filter="url(#redGlow)"
+        letter-spacing="4">
+      BANKAI
+  </text>
+</svg>
